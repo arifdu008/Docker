@@ -1,4 +1,4 @@
-
+# Our main objective here is to understand how linux network namespaces communicate each other
 
 Create 2 name space and show created namespaces
 
