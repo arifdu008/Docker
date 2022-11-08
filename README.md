@@ -6,16 +6,16 @@ Create 2 name space and show created namespaces
 
 Create virtual ethernet cable by command
 
-![imagename](/image/2.jpg)
+![imagename](/image/2.JPG)
 
 Connect virtual cables to corresponding namespaces
 
-![imagename](/image/3.jpg)
+![imagename](/image/3.JPG)
 
 Enter namespace and see created interface
 
-![imagename](/image/4.jpg)
+![imagename](/image/4.JPG)
 
 I will add SH for test
 
-![imagename](/image/Properties.jpg)
+![imagename](/image/Properties.JPG)
