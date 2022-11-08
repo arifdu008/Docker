@@ -74,9 +74,9 @@ Sending some text in TCP connection and get responses in server
 
 ### Here we got "code 400, message Bad request syntax" error because TCP connection needs data in http format
 
-# We will now connect 3 namespaces in bridge switch and communicate between them according below diagram
+# We will now connect 3 namespaces in bridge switch and establish communication between them according below diagram
 
-
+![imagename](/image/bridgeconnection.JPG)
 
 
 Create bridge switch
