@@ -1,4 +1,4 @@
-# Our main objective here is to understand how linux network namespaces communicate each other on deep level
+Our main objective here is to understand how linux network namespaces communicate each other on deep level
 
 # Our first goal is create two name space and run python base http server on one namespace and connect from another namespace as client as per below diagram
 
