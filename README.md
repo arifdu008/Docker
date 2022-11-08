@@ -1,6 +1,6 @@
-Our main objective here is to understand how linux network namespaces communicate each other on deep level
+# Our main objective here is to understand how linux network namespaces communicate each other on deep level
 
-# Our first goal is create two name space and run python base http server on one namespace and connect from another namespace as client as per below diagram
+### _Our first goal is create two name space and run python base http server on one namespace and connect from another namespace as client as per below diagram_
 
 ![imagename](/image/diagram.JPG)
 
@@ -60,7 +60,7 @@ From hosts
 
 ![imagename](/image/13.JPG)
 
-# Install Python service exposed in 9000 port and bind in server (Here it is 192.168.1.1)
+## Install Python service exposed in 9000 port and bind in server (Here it is 192.168.1.1)
 
 ![imagename](/image/16.JPG)
 
@@ -72,5 +72,5 @@ Sending some text in TCP connection and get responses in server
 
 ![imagename](/image/18.JPG)
 
-# Here we got "code 400, message Bad request syntax" error because TCP connection needs data in http format
+### Here we got "code 400, message Bad request syntax" error because TCP connection needs data in http format
 
