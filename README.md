@@ -16,6 +16,6 @@ Enter namespace and see created interface
 
 ![imagename](/image/4.JPG)
 
-I will add SH for test
+Loopback and virtual ethernet interface up
 
-![imagename](/image/Properties.JPG)
+![imagename](/image/5.JPG)
