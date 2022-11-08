@@ -15,3 +15,7 @@ Connect virtual cables to corresponding namespaces
 Enter namespace and see created interface
 
 ![imagename](/image/4.jpg)
+
+I will add SH for test
+
+![imagename](/image/Properties.jpg)
