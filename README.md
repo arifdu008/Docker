@@ -1,4 +1,4 @@
-# Our main objective here is to understand how linux network namespaces communicate each other
+# Our main objective here is to understand how linux network namespaces communicate each other on deep level
 
 Create 2 name space and show created namespaces
 
@@ -55,3 +55,17 @@ From namespaces
 From hosts
 
 ![imagename](/image/13.JPG)
+
+# Install Python service exposed in 9000 port and bind in server (Here it is 192.168.1.1)
+
+![imagename](/image/16.JPG)
+
+Connect from client (Here it is 192.168.1.2)
+
+![imagename](/image/17.JPG)
+
+Sending some text in TCP connection and get responses in server
+
+![imagename](/image/18.JPG)
+
+### Here we got "code 400, message Bad request syntax" error becaus TCP is secure connection and we are sending plain text which is not proper format to transfer data through TCP
