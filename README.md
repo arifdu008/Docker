@@ -8,7 +8,7 @@ Create virtual ethernet cable by command
 
 ![imagename](/image/2.jpg)
 
-Connect virtual cables to coresspondind namespaces
+Connect virtual cables to corresponding namespaces
 
 ![imagename](/image/3.jpg)
 
