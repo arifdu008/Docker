@@ -16,6 +16,8 @@ Enter namespace and see created interface
 
 ![imagename](/image/4.JPG)
 
-Loopback and virtual ethernet interface up
+Loopback and virtual ethernet interface up on each namespace
 
 ![imagename](/image/5.JPG)
+
+![imagename](/image/6.JPG)
