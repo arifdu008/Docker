@@ -68,4 +68,5 @@ Sending some text in TCP connection and get responses in server
 
 ![imagename](/image/18.JPG)
 
-### Here we got "code 400, message Bad request syntax" error becaus TCP is secure connection and we are sending plain text which is not proper format to transfer data through TCP
+# Here we got "code 400, message Bad request syntax" error because TCP connection needs data in http format
+
