@@ -27,3 +27,31 @@ Assign IP addres in each namespace and make sure interface is up
 ![imagename](/image/7.JPG)
 
 ![imagename](/image/8.JPG)
+
+Both namespace interface is up but cannot communicate each other as there is no route on them, from host and name space we can check that namespaces can ping itself but not go outside namespaces.
+
+From host
+
+![imagename](/image/9.JPG)
+
+From namespaces
+
+![imagename](/image/10.JPG)
+
+We need to add route in both namespace
+
+![imagename](/image/11.JPG)
+
+![imagename](/image/12.JPG)
+
+Now we can ping each other namespaces
+
+From namespaces
+
+![imagename](/image/14.JPG)
+
+![imagename](/image/15.JPG)
+
+From hosts
+
+![imagename](/image/13.JPG)
