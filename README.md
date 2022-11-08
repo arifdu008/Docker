@@ -4,8 +4,6 @@
 
 ![imagename](/image/diagram.JPG)
 
-                            Diagram
-
 Create 2 name space and show created namespaces
 
 ![imagename](/image/1.JPG)
