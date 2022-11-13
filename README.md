@@ -6,6 +6,12 @@
 
 Create 2 name space and show created namespaces
 
+```bash
+ip netns add red
+ip netns add green
+ip netns
+```
+
 ![imagename](/image/1.JPG)
 
 Create virtual ethernet cable by command
@@ -81,61 +87,132 @@ Sending some text in TCP connection and get responses in server
 
 Create bridge switch
 
+```bash
+ip link add bri0 type bridge
+```
 ![imagename](/image/19.JPG)
 
+
 Power up bridge switch
+
+````bash
+ip link set bri0 up
+````
 
 ![imagename](/image/20.JPG)
 
 Set Ip in bridge interface
-
+````bash
+ip addr add 192.168.0.1/16 dev bri0
+````
 ![imagename](/image/21.JPG)
 
 Create 3 namespaces
-
+````bash
+ip netns add black
+ip netns add white
+ip netns add green
+````
 ![imagename](/image/23.JPG)
 
 Create 3 virtual cables
+
+```bash
+ip link add bveth type veth peer name bbrveth
+ip link add wveth type veth peer name wbrveth
+ip link add gveth type veth peer name gbrveth
+```
 
 ![imagename](/image/24.JPG)
 
 Connect virtual cable end to corrosponding namespace
 
+```bash
+ip link set bveth netns black
+ip link set wveth netns white
+ip link set gveth netns green
+```
+
 ![imagename](/image/25.JPG)
 
 Connect other end of virtual cable to bridge switch port
 
+```bash
+ip link set bbrveth master bri0
+ip link set wbrveth master bri0
+ip link set gbrveth master bri0
+```
+
 ![imagename](/image/26.JPG)
 
-Power up cables switch end
+Power up switch end cables points
+
+```bash
+ip link set bbrveth up
+ip link set wbrveth up
+ip link set gbrveth up
+```
 
 ![imagename](/image/27.JPG)
 
-Power up cables namespaces end and also up loopback interface
+Power up namespaces end cables and also up loopback interface
+
+```bash
+ip netns exec black ip link set dev bveth up
+ip netns exec white ip link set dev wveth up
+ip netns exec green ip link set dev gveth up
+ip netns exec black ip link set dev lo up
+ip netns exec white ip link set dev lo up
+ip netns exec green ip link set dev lo up
+```
 
 ![imagename](/image/28.JPG)
 
-Bridge switch and namespaces interface is up now
+Check Bridge switch and namespaces interface is up now
+```bash
+ip addr
+```
 
 ![imagename](/image/29.JPG)
 
 Assign IP address to namespaces interfaces
 
+```bash
+ip netns exec black ip addr add 192.168.1.1/24 dev bveth
+ip netns exec white ip addr add 192.168.1.1/24 dev wveth
+ip netns exec green ip addr add 192.168.1.1/24 dev gveth
+`````
+
 ![imagename](/image/30.JPG)
 
-Enter in each namespace and add default route command
+Enter on each namespace and add default route command
+
+```bash
+ip netns exec green bash
+ip route add default dev gveth
+```
 
 ![imagename](/image/31.JPG)
 
 Now we run python web server on custom port in one namespace
+```bash
+python3 -m http.server --bind 192.168.1.1 800
+```
 
 ![imagename](/image/32.JPG)
 
 Now we run tcpdump command on bridge network Python server interface to check connection is transfer over bridge switch
 
+```bash
+tcpdump -i bbrveth
+```
 ![imagename](/image/33.JPG)
 
 We also run ping command to Python server from another namespace
+```bash
+ping 192.168.1.1
+
+```
 
 ![imagename](/image/34.JPG)
 
