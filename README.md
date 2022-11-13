@@ -179,8 +179,8 @@ Assign IP address to namespaces interfaces
 
 ```bash
 ip netns exec black ip addr add 192.168.1.1/24 dev bveth
-ip netns exec white ip addr add 192.168.1.1/24 dev wveth
-ip netns exec green ip addr add 192.168.1.1/24 dev gveth
+ip netns exec white ip addr add 192.168.2.1/24 dev wveth
+ip netns exec green ip addr add 192.168.3.1/24 dev gveth
 `````
 
 ![imagename](/image/30.JPG)
