@@ -229,3 +229,8 @@ Host Used for monitor traffic
 
 ![imagename](/image/37.JPG)
 
+Identify running namespace
+
+````bash
+ip netns identify 
+````
