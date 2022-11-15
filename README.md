@@ -283,6 +283,18 @@ Now we need NAT policy in host to send namespaces tarffic to internet
 ```bash
 iptables -t nat -A POSTROUTING -s 192.168.0.0/16 ! -o bri0 -j MASQUERADE
 ```
+Here we use 
+
+_-t nat_  used for tell which packet to change
+
+_-A POSTROUTING_  used for add to chain for altering packets as they are about to go out
+
+_-s_  used for source selection
+
+_! -o bri0_ used for not match traffic in this interface other then source added
+
+_-j MASQUERADE_   used for action needed when rule match 
+
 ![imagename](/image/nat_rule.JPG)
 
 Now we can see 8.8.8.8 response
