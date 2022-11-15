@@ -229,3 +229,43 @@ Host Used for monitor traffic
 
 ![imagename](/image/37.JPG)
 
+
+Identify running namespace
+
+````bash
+ip netns identify 
+````
+![imagename](/image/identify_namespace.JPG)
+
+We can connect other namespaces (192.168.1.1) in same host but ping outside (8.8.8.8)
+
+````bash
+ping 192.168.1.1
+ping 8.8.8.8
+route
+
+````
+
+![imagename](/image/38.JPG)
+
+Set tcpdump on bridge interface and namespace connected to bridge (gbveth) and found that traffic not entering in that interface as their is no route for outside (8.8.8.8) network but can reach other namespaces (192.168.1.1) in same host
+
+![imagename](/image/39.JPG)
+
+![imagename](/image/40.JPG)
+
+Add route for outside (8.8.8.8) network on namespace
+
+![imagename](/image/41.JPG)
+
+After default route add via bridge interface traffic pass switch but no response
+
+![imagename](/image/42.JPG)
+
+Noe we need NAT policy in host to send namespaces tarffic to internet
+
+![imagename](/image/nat_rule.JPG)
+
+Now we can see 8.8.8.8 response
+
+![imagename](/image/43.JPG)
