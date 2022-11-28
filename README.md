@@ -198,9 +198,9 @@ ip route add default dev gveth
 
 ![imagename](/image/31.JPG)
 
-Now we run python web server on custom port in one namespace
+Now we run python web server on custom port in our black namespace
 ```bash
-python3 -m http.server --bind 192.168.1.1 800
+python3 -m http.server --bind 192.168.1.1 8080
 ```
 
 ![imagename](/image/32.JPG)
